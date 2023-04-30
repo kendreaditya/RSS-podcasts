@@ -27,6 +27,11 @@ def find_topics(lines):
         topic, file_name = line.split("/")[-2:]
 
         title = clean_title(topic)
+        if title == "":
+            title = clean_title(file_name)
+            if len(title.split(" ")) > 1:
+                title = " ".join(title.split(" ")[:2])
+
         if title == "Vritasur Katha":
             file_name = f"Vritasur Katha {file_name[-6:-4]}"
         file = File(url=line, title=create_file_title(file_name))
@@ -36,12 +41,6 @@ def find_topics(lines):
         else:
             topics[title].files.append(file)
 
-    for topic in topics:
-        topics[topic].files.sort(key=lambda x: x.title)
-        print(topic)
-        for file in topics[topic].files:
-            print("\t", file.title)
-    
     return topics
 
 def clean_title(title):
@@ -183,5 +182,4 @@ if __name__ == "__main__":
     topics = find_topics(lines)
     for topic in topics:
         channel = channelize(topics[topic])
-        channel.to_rss(f"./rss-feed/{topic}.xml")
-        break
+        channel.to_rss(f"./rss-feed/RGS/{topic}.xml")

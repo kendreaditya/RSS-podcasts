@@ -12,7 +12,7 @@ with open("./rss-feed/RGS.opml", "w") as f:
     
     for filename in os.listdir(dir_path):
         if filename.endswith(".xml"):
-            f.write(f'    <outline type="rss" text="{filename}" title="{filename}" xmlUrl="{os.path.join("https://raw.githubusercontent.com/kendreaditya/RSS-podcasts/main/rss-feed/", filename)}" />\n')
+            f.write(f'    <outline type="rss" text="{filename}" title="{filename}" xmlUrl="{os.path.join("https://github.com/kendreaditya/RSS-podcasts/raw/main/rss-feed/RGS/", filename)}" />\n')
     
     f.write('  </body>\n')
     f.write('</opml>')

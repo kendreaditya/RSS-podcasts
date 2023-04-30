@@ -168,7 +168,7 @@ class Channel:
         ET.ElementTree(rss_elem).write(filename, encoding='UTF-8', xml_declaration=True)
 
 if __name__ == "__main__":
-    lines = read_file("./examples/GGM-playlist.m3u")
+    lines = read_file("./examples/RGS-playlist.m3u")
     topics = find_topics(lines)
     for topic in topics:
         channel = channelize(topics[topic])

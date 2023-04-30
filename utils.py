@@ -139,6 +139,17 @@ class Channel:
         title_elem = ET.SubElement(channel_elem, 'title')
         title_elem.text = self.title
 
+        author_elem = ET.SubElement(channel_elem, 'author')
+        author_elem.text = self.author
+
+        image_elem = ET.SubElement(channel_elem, 'image')
+        image_url_elem = ET.SubElement(image_elem, 'url')
+        image_url_elem.text = self.image_url
+        image_title_elem = ET.SubElement(image_elem, 'title')
+        image_title_elem.text = self.image_title
+        image_link_elem = ET.SubElement(image_elem, 'link')
+        image_link_elem.text = self.image_link
+
 
         # ... add remaining channel elements ...
 

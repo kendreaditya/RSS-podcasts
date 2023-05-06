@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" 
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" 
+     xmlns:atom="http://www.w3.org/2005/Atom" 
+     xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" 
+     xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+     version="2.0">
+  <channel>
+    <title>Youtube Test</title>
+    <author>None</author>
+    <item>
+      <author>Direct</author>
+      <title>Direct</title>
+      <enclosure url="http://audio.iskcondesiretree.com:443/02_-_ISKCON_Swamis/ISKCON_Swamis_-_R_to_Y/His_Holiness_Radha_Govinda_Swami/Kunti_Stuti_2002/RGS_Kunti_Stuti_2002_-_Day-01_Part-01.mp3" type="audio/mpeg" />
+    </item>
+    <item>
+      <author>Forwared</author>
+      <title>Forwared</title>
+      <enclosure url="https://76bhbb23bbsvulmrfkdk4an33i0yfqmi.lambda-url.us-east-2.on.aws/ " type="audio/mpeg" />
+    </item>
+  </channel>
+</rss>
